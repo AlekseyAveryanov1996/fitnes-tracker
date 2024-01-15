@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { devices } from "../../settings"
+import styled from "styled-components";
+import { devices } from "../../settings";
 
 const Btn = styled.button`
   padding: 16px 60px;
@@ -15,17 +15,15 @@ const Btn = styled.button`
   outline: none;
   border-radius: 4px;
   font-weight: 500;
-  transition: background .5s ease;
+  transition: background 0.5s ease;
   cursor: pointer;
   ${devices.tabletLarge} {
     &:hover {
       background: #213d3d;
     }
   }
-`
+`;
 
-export default function Button({children}) {
-  return (
-    <Btn>{children}</Btn>
-  )
+export default function Button({ isActive, onClick, children }) {
+  return <Btn onClick={onClick}>{children}</Btn>;
 }
