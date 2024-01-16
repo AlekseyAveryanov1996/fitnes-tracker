@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { devices } from "../../../settings";
 import Button from "../../ui/Button";
 import { useState } from "react";
+import Autentification from "./Autentification/Autentification";
+import Registr from "./Registr/Registr";
 
 const ContainerTabs = styled.div`
   position: fixed;
@@ -29,6 +31,10 @@ const TabsHeader = styled.div`
   }
 `;
 
+const TabsMain = styled.div`
+  margin-top: 20px;
+`
+
 export default function LoginTabs() {
   const [tab, setTab] = useState("login");
 
@@ -38,8 +44,11 @@ export default function LoginTabs() {
         <Button onClick={() => setTab("login")}>Авторизация</Button>
         <Button onClick={() => setTab("registr")}>Регистрация</Button>
       </TabsHeader>
-      {tab === "login" && <p>Login</p>}
-      {tab === "registr" && <p>registr</p>}
+      
+      <TabsMain>
+        {tab === "login" && <Autentification />}
+        {tab === "registr" && <Registr />}
+      </TabsMain>
     </ContainerTabs>
   );
 }
