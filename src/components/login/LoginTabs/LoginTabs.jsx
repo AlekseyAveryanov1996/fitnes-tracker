@@ -33,7 +33,7 @@ const TabsHeader = styled.div`
 
 const TabsMain = styled.div`
   margin-top: 20px;
-`
+`;
 
 export default function LoginTabs() {
   const [tab, setTab] = useState("login");
@@ -41,10 +41,20 @@ export default function LoginTabs() {
   return (
     <ContainerTabs>
       <TabsHeader>
-        <Button onClick={() => setTab("login")}>Авторизация</Button>
-        <Button onClick={() => setTab("registr")}>Регистрация</Button>
+        <Button
+          isActive={tab === "login"}
+          onClick={() => setTab("login")}
+        >
+          Авторизация
+        </Button>
+        <Button
+          isActive={tab === "registr"}
+          onClick={() => setTab("registr")}
+        >
+          Регистрация
+        </Button>
       </TabsHeader>
-      
+
       <TabsMain>
         {tab === "login" && <Autentification />}
         {tab === "registr" && <Registr />}
