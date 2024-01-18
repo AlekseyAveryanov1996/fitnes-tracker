@@ -33,6 +33,9 @@ const TabsHeader = styled.div`
 
 const TabsMain = styled.div`
   margin-top: 20px;
+  ${devices.tabletLarge} {
+    margin-top: 40px;
+  }
 `;
 
 export default function LoginTabs() {

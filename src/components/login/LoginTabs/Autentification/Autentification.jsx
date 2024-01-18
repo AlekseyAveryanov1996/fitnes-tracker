@@ -1,23 +1,24 @@
 import { FaRegUser } from "react-icons/fa";
 import { BiShow } from "react-icons/bi";
-import Input from "../../../ui/Input";
+import InputComponents from "../../../ui/InputComponents";
 import Button from "../../../ui/Button";
+import Form from "../../../ui/Form";
 
 export default function Autentification() {
   return (
-    <div>
-      <Input
+    <Form>
+      <InputComponents
         type="email"
         placeholder={"Введите ваш Email"}
         icon={<FaRegUser />}
       />
-      <Input
+      <InputComponents
         type="password"
         placeholder={"Укажите ваш пароль"}
         icon={<BiShow />}
       />
 
-      <Button>Отправить</Button>
-    </div>
+      <Button>Войти</Button>
+    </Form>
   );
 }

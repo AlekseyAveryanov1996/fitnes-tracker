@@ -24,7 +24,7 @@ const Btn = styled.button`
   }
 `;
 
-export default function Button({ isActive, onClick, type, children }) {
+export default function Button({ isActive, onClick, children }) {
   return (
     <Btn
       isActiveButton={isActive}
