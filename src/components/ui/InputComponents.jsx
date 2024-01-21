@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { devices } from "../../settings";
 
 const InputWrapper = styled.div`
   position: relative;

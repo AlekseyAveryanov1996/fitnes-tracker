@@ -7,7 +7,7 @@ const Btn = styled.button`
   justify-content: center;
   align-items: center;
   color: #fff;
-  background: ${(props) => (props.isActiveButton ? "#66a9a9" : "#354545")};
+  background: ${(props) => (props.$isActiveButton ? "#66a9a9" : "#354545")};
   width: 100%;
   max-width: fit-content;
   margin: 0 0;
@@ -27,7 +27,7 @@ const Btn = styled.button`
 export default function Button({ isActive, onClick, children }) {
   return (
     <Btn
-      isActiveButton={isActive}
+      $isActiveButton={isActive}
       onClick={onClick}
     >
       {children}
