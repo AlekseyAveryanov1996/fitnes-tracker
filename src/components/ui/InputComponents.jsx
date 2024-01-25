@@ -27,12 +27,13 @@ const InputIcon = styled.div`
   align-items: center;
 `;
 
-export default function InputComponents({ type = "text", placeholder, icon }) {
+export default function InputComponents({ type = "text", placeholder, icon, onChange }) {
   return (
     <InputWrapper>
       <Input
         type={type}
         placeholder={placeholder}
+        onChange={onChange}
       />
       <InputIcon>{icon}</InputIcon>
     </InputWrapper>
